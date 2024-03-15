@@ -10,19 +10,23 @@
 </head>
 <body>
   <header style="z-index: 10;">
-    <!-- Header like hyprland-waybar -->
     <!-- Volume Display for Music Widget -->
     <div id="volume-display">
       <span>Vol:</span>
       <span id="volume-current">44%</span>
     </div>
+    <div id="volume-slider-container" style="display: none;">
+      <input id="volume-slider" class="slider" type="range" min="1" max="100" value="44">
+    </div>
     
     <!-- Music Widget in center, chose good song and functional playback -->
     <div id="music-widget">
+      <audio id="song" src="./metadata/wolf-of-wall-street-chest-thump-short.mp3" type="audio/mpeg"></audio>
       <img id="music-icon" src="./metadata/music-icon.png" alt="Music Icon">
       <span>Tune of Wealth</span>
       <span id="music-button-spacer-1">|</span>
-      <img id="play-music-button" src="./metadata/play-icon.png" alt="Play Music Icon">
+      <img id="play-music-button" style="display: block;" src="./metadata/play-icon.png" alt="Play Music Icon">
+      <img id="pause-music-button" style="display: none;" src="./metadata/pause-icon.png" alt="Play Music Icon">
       <span id="music-button-spacer-2">|</span>
     </div>
 

@@ -1,0 +1,343 @@
+/* color scheme - catpuccin */
+:root {
+  --base: rgba(17, 17, 27, 1.0);
+  --text: rgba(205, 214, 244, 1.0);
+  --baseTranslucent: rgba(205, 214, 244, 0.169);
+  --rosewater: rgba(245, 224, 220, 1.0);
+  --lavender: rgba(180, 190, 254, 1.0);
+  --mauve: rgba(203, 166, 247, 1.0);
+  --red: rgba(243, 139, 168, 1.0);
+  --peach: rgba(250, 179, 135, 1.0);
+  --yellow: rgba(249, 226, 175, 1.0);
+  --green: rgba(166, 227, 161, 1.0);
+  --teal: rgba(148, 226, 213, 1.0);
+  --blue: rgba(137, 180, 250, 1.0);
+}
+
+@font-face {
+  font-family: 'JetBrains';
+  src: url(./metadata/fonts/JetBrainsMonoNerdFont-Regular.ttf);
+}
+@font-face {
+  font-family: 'Dot';
+  src: url(./metadata/fonts/DotGothic16-Regular.ttf);
+}
+@font-face {
+  font-family: 'Hammer';
+  src: url(./metadata/fonts/HammersmithOne-Regular.ttf);
+}
+@font-face {
+  font-family: 'SpaceMono-Italic';
+  src: url(./metadata/fonts/SpaceMono-Italic.ttf);
+}
+@font-face {
+  font-family: 'SpaceMono';
+  src: url(./metadata/fonts/SpaceMono-Regular.ttf);
+}
+
+/* let page take full height of viewport excess */
+html {height: 100%;} body {position: absolute; top: 0; bottom: 0; right: 0; left: 0;}
+
+body {
+  background-color: var(--base);
+  color: var(--text);
+  font-family: 'SpaceMono';
+}
+
+/* catppuccin/waybar inspired header */
+header {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 760px;
+  height: auto;
+  padding: 0;
+  margin-top: 24px;
+}
+
+#volume-display {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: auto;
+  height: auto;
+  padding: 4px 16px;
+  font-family: 'SpaceMono';
+  font-size: 16px;
+  color: var(--red);
+  background-color: var(--baseTranslucent);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 12px;
+  cursor: pointer;
+}
+#volume-current {
+  letter-spacing: 2px;
+  color: var(--red);
+}
+
+#music-widget {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  width: auto;
+  height: auto;
+  padding: 4px 16px;
+  font-family: 'SpaceMono';
+  font-size: 16px;
+  color: var(--mauve);
+  background-color: var(--baseTranslucent);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 12px;
+  cursor: pointer;
+}
+#music-icon {
+  display: block;
+  height: 14px;
+  width: auto;
+}
+#music-button-spacer-1 {
+  margin-right: -8px;
+}
+#music-button-spacer-2 {
+  margin-left: -8px;
+}
+#play-music-button {
+  height: 12px;
+}
+
+#purchase-action-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+.action-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  width: auto;
+  height: auto;
+  padding: 4px 16px;
+  font-family: 'SpaceMono';
+  font-size: 16px;
+  background-color: var(--baseTranslucent);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 12px;  
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+}
+#chart-button {
+  color: var(--lavender);
+}
+#buy-button {
+  color: var(--green);
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-blur {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 48px;
+  border-radius: 12px;
+  background-color: var(--baseTranslucent);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 12px;  
+  border: none;
+}
+h1 {
+  font-family: 'SpaceMono-Italic';
+  font-size: 36px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+h2 {
+  margin-top: 24px;
+  font-family: 'SpaceMono';
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+#ca-container {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#contract-title {
+  font-size: 16px;
+  border-bottom: 1.69px solid var(--text);
+  margin-bottom: 12px;
+}
+#contract {
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+#copy-ca-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12px;
+  width: 174px;
+  height: auto;
+  padding: 4px 0px;
+  font-family: 'SpaceMono';
+  font-size: 12px;
+  background-color: var(--baseTranslucent);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 12px;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+}
+
+#socials-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 0;
+  margin-top: 24px;
+  width: 100%;
+}
+.socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  padding: 4px 16px;
+  font-family: 'SpaceMono';
+  font-size: 16px;
+  background-color: var(--baseTranslucent);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 12px;  
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+}
+#twitter-button {
+  color: var(--blue);
+}
+#tg-button {
+  color: var(--teal);
+}
+
+/* Switch for turning Emojis background on/off */
+#emoji-switch-container {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  padding: 4px 16px;
+  font-family: 'SpaceMono';
+  font-size: 14px;
+  background-color: var(--baseTranslucent);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 12px;  
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+}
+#emoji-back-on {
+  color: var(--yellow);
+}
+#emoji-back-off {
+  color: var(--yellow);
+}
+
+/* mobile optimzations */
+@media screen and (max-width: 801px) {
+  header {
+    width: 330px;
+    margin-top: 24px;
+  }
+  #volume-display {
+    flex-direction: column;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  #music-widget {
+    gap: 4px;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  #music-button-spacer-1 {
+    margin-right: -2px;
+  }
+  #music-button-spacer-2 {
+    margin-left: -2px;
+  }
+  #purchase-action-buttons {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .action-button {
+    padding: 4px 12px;
+    font-size: 14px;
+  }
+  .main-blur {
+    padding: 24px 24px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+  #contract-title {
+    font-size: 12px;
+  }
+  #contract {
+    width: 280px;
+    text-align: center;
+    word-wrap: break-word;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+  .socials {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  #emoji-switch-container {
+    font-size: 12px;
+  }
+}

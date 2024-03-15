@@ -98,26 +98,50 @@ document.addEventListener("DOMContentLoaded", function() {
     volumeCurrent.textContent = volumeSlider.value + '%';
   });
 
-  // phone optimization
-  volumeSlider.addEventListener('touchstart', function(event) {
-    event.preventDefault();
-    handleVolumeUpdate(event);
-  });
-  volumeSlider.addEventListener('touchmove', function(event) {
-    event.preventDefault();
-    handleVolumeUpdate(event);
-  });
-  function handleVolumeUpdate(event) {
-    const touch = event.touches[0]; // Get the first touch point
-    const sliderRect = volumeSlider.getBoundingClientRect();
-    const touchX = touch.clientX - sliderRect.left; // Touch position relative to slider
+  /* Make It Rain */
+  const bandsContainer = document.querySelector(".bands");
+  let isAnimationOn = true; // Start animation by default
 
-    // Calculate percentage (ensure it stays between 0 and 100)
-    let newVolumePercent = Math.max(0, Math.min(100, (touchX / sliderRect.width) * 100));
+  function makeItRain() {
+    const band = document.createElement("img");
+    band.classList.add("cash");
+    band.style.position = "absolute";
+    band.style.left = `${getRandomInt(window.innerWidth)}px`;
+    band.src = "./metadata/money-with-wings.png";
+    band.style.width = "24px";
+    band.style.height = "auto";
+    bandsContainer.appendChild(band);
 
-    // Update slider and audio volume
-    volumeSlider.value = newVolumePercent;
-    audio.volume = newVolumePercent / 100;
-    volumeCurrent.textContent = newVolumePercent + '%';
+    setTimeout(() => {
+      band.remove();
+    }, 12000);
   }
+  setInterval(() => {
+    makeItRain();
+  }, 500);
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+  }
+
+  const emojiSwitch = document.getElementById('emoji-switch-container');
+  const emojiOn = document.getElementById('emoji-back-on');
+  const emojiOff = document.getElementById('emoji-back-off');
+
+  emojiSwitch.addEventListener('click', () => {
+    isAnimationOn = !isAnimationOn;
+
+    if (isAnimationOn) {
+      emojiOn.style.display = 'block';
+      emojiOff.style.display = 'none';
+      bandsContainer.style.display = 'block'; // Show animation
+      makeItRain(); // Restart animation
+    } else {
+      emojiOn.style.display = 'none';
+      emojiOff.style.display = 'block';
+      bandsContainer.style.display = 'none'; // Hide animation
+      bandsContainer.innerHTML = '';  // Clear existing animations
+    }
+  });
+
+  makeItRain();
 });

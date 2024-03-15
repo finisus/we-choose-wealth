@@ -97,4 +97,27 @@ document.addEventListener("DOMContentLoaded", function() {
     audio.volume = newVolume;
     volumeCurrent.textContent = volumeSlider.value + '%';
   });
+
+  // phone optimization
+  volumeSlider.addEventListener('touchstart', function(event) {
+    event.preventDefault();
+    handleVolumeUpdate(event);
+  });
+  volumeSlider.addEventListener('touchmove', function(event) {
+    event.preventDefault();
+    handleVolumeUpdate(event);
+  });
+  function handleVolumeUpdate(event) {
+    const touch = event.touches[0]; // Get the first touch point
+    const sliderRect = volumeSlider.getBoundingClientRect();
+    const touchX = touch.clientX - sliderRect.left; // Touch position relative to slider
+
+    // Calculate percentage (ensure it stays between 0 and 100)
+    let newVolumePercent = Math.max(0, Math.min(100, (touchX / sliderRect.width) * 100));
+
+    // Update slider and audio volume
+    volumeSlider.value = newVolumePercent;
+    audio.volume = newVolumePercent / 100;
+    volumeCurrent.textContent = newVolumePercent + '%';
+  }
 });

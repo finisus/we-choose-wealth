@@ -177,23 +177,11 @@ h1 {
   margin-top: 0;
   margin-bottom: 0;
 }
-#h2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
 h2 {
   margin-top: 24px;
   font-family: 'SpaceMono';
   font-size: 24px;
   letter-spacing: 2px;
-}
-#h2 img {
-  width: 28px;
-  height: auto;
-  margin-right: 6px;
 }
 
 #ca-container {
@@ -334,9 +322,6 @@ h2 {
   h2 {
     font-size: 20px;
     letter-spacing: 2px;
-  }
-  #h2 img {
-    width: 22px;
   }
   #contract-title {
     font-size: 12px;

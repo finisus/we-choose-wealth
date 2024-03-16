@@ -1,4 +1,22 @@
 document.addEventListener("DOMContentLoaded", function() {
+  /* landing page */
+  const landingPage = document.getElementById('landing-page');
+  const closeLandingBtn = document.getElementById('close-landing-button');
+  const header = document.querySelector('header');
+  const main = document.querySelector('main');
+    
+  // show the landing page on load and hide other items
+  landingPage.style.display = 'flex';
+  header.style.display = 'none';
+  main.style.display = 'none'
+  
+  // hide with action button
+  closeLandingBtn.addEventListener('click', function() {
+    landingPage.style.display = 'none';
+    header.style.display = 'flex';
+    main.style.display = 'flex';
+  });
+
   /* hyperlinks */
   const buyBtn = document.getElementById('buy-button');
   const chartBtn = document.getElementById('chart-button');

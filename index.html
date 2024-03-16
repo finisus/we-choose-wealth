@@ -4,12 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>$WEALTH | WE CHOOSE WEALTH</title>
-  <link rel="icon" type="image/x-icon" href="./metadata/dollar-banknote.png"> <!-- TODO: Change Favicon -->
+  <link rel="icon" type="image/x-icon" href="./metadata/dollar-banknote.png">
   <link rel="stylesheet" href="./style.css">
   <script src="./app.js"></script>
 </head>
 <body>
+
+  <div id="landing-page" style="z-index: 20;">
+    <div id="pfp" style="z-index: 20;">
+      <img src="./metadata/pfp.jpeg" style="z-index: 20;">
+    </div>
+    <button id="close-landing-button">Click to choose wealth...</button>
+  </div>
+
   <div class="bands" style="z-index: -10;"></div>
+  
   <header style="z-index: 10;">
     <!-- Volume Display for Music Widget -->
     <div id="volume-display">

@@ -29,10 +29,10 @@ document.addEventListener("DOMContentLoaded", function() {
     window.open('https://dexscreener.com/', '_blank');
   });
   twitterBtn.addEventListener('click', function() {
-    window.open('https://x.com/finisusdoteth', '_blank');
+    window.open('https://x.com/wechosewealth', '_blank');
   });
   telegramBtn.addEventListener('click', function() {
-    window.open('https://t.me/', '_blank');
+    window.open('https://t.me/WECHOOSEWEALTH', '_blank');
   });
 
   /* copy contract logic */

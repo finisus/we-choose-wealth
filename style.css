@@ -236,8 +236,8 @@ main {
   padding: 24px 48px;
   border-radius: 12px;
   background-color: var(--baseTranslucent);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-radius: 12px;  
   border: none;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.0),

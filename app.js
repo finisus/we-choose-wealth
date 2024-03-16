@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function() {
     band.style.position = "absolute";
     band.style.left = `${getRandomInt(window.innerWidth)}px`;
     band.src = "./metadata/money-with-wings.png";
-    band.style.width = "24px";
+    band.style.width = "60px";
     band.style.height = "auto";
     bandsContainer.appendChild(band);
 

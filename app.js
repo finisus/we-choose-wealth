@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
     mainCard.style.display = mainCard.style.display === 'none' ? 'flex' : 'none';
     tokenomics.style.display = tokenomics.style.display === 'none' ? 'flex' : 'none';
     switchCard.textContent = tokenomics.style.display === 'none' ? 'Tokenomics?' : 'Go back...';
-    switchCard.style.bottom = tokenomics.style.display === 'none' ? 'calc(50% - 248px)' : 'calc(50% - 304px)'; // pos with tokenomics card
+    switchCard.style.bottom = tokenomics.style.display === 'none' ? 'calc(50% - 248px)' : 'calc(50% - 280px)'; // pos with tokenomics card
   });
 
   /* hyperlinks */

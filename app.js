@@ -36,12 +36,10 @@ document.addEventListener("DOMContentLoaded", function() {
   const switchCard = document.getElementById('switch-card');
   tokenomics.style.display = 'none'; // hide initially
   switchCard.textContent = 'Tokenomics?'; // Initial text
-  switchCard.style.bottom = 'calc(50% - 248px)' // initial pos with main card
   switchCard.addEventListener('click', function() {
     mainCard.style.display = mainCard.style.display === 'none' ? 'flex' : 'none';
     tokenomics.style.display = tokenomics.style.display === 'none' ? 'flex' : 'none';
     switchCard.textContent = tokenomics.style.display === 'none' ? 'Tokenomics?' : 'Go back...';
-    switchCard.style.bottom = tokenomics.style.display === 'none' ? 'calc(50% - 248px)' : 'calc(50% - 280px)'; // pos with tokenomics card
   });
 
   /* hyperlinks */

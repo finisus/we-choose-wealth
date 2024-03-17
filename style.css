@@ -412,13 +412,43 @@ h2 {
   letter-spacing: 1px;
 }
 
-/* Switch for turning Emojis background on/off */
-#emoji-switch-container {
+#footer {
   position: absolute;
   bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
+  width: auto;
+  height: auto;
+  display: flex;
   margin-bottom: 24px;
+  gap: 24px;
+}
+/* button to switch cards */
+#switch-card {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  padding: 8px 12px;
+  font-family: 'SpaceMono';
+  font-size: 14px;
+  background-color: var(--baseTranslucent);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 12px;
+  border: none;
+  color: var(--rosewater);
+  cursor: pointer;
+}
+#switch-card:hover {
+  background-color: rgba(245, 224, 220, 0.25);
+}
+#switch-card:active {
+  background-color: var(--baseTranslucent);
+}
+/* Switch for turning Emojis background on/off */
+#emoji-switch-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -504,37 +534,6 @@ h2 {
 }
 #close-landing-button:hover {
   background-color: rgba(205, 214, 244, 0.25);
-}
-
-/* button to switch cards */
-#switch-card {
-  position: fixed;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  margin-top: 24px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: auto;
-  height: auto;
-  padding: 8px 12px;
-  font-family: 'SpaceMono';
-  font-size: 14px;
-  background-color: var(--baseTranslucent);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-radius: 12px;
-  border: none;
-  color: var(--text);
-  cursor: pointer;
-}
-#switch-card:hover {
-  background-color: rgba(205, 214, 244, 0.25);
-}
-#switch-card:active {
-  background-color: var(--baseTranslucent);
 }
 
 /* mobile optimzations */

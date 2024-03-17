@@ -23,10 +23,10 @@ document.addEventListener("DOMContentLoaded", function() {
   const twitterBtn = document.getElementById('twitter-button');
   const telegramBtn = document.getElementById('tg-button');
   buyBtn.addEventListener('click', function() {
-    window.open('https://raydium.io/swap/?inputCurrency=sol&outputCurrency=', '_blank');
+    window.open('https://raydium.io/swap/?inputCurrency=sol&outputCurrency=7VRcDxY9MvhAFED1hrHbf5vQRK7EdvK7qNjh8tLd5ZQL', '_blank');
   });
   chartBtn.addEventListener('click', function() {
-    window.open('https://dexscreener.com/', '_blank');
+    window.open('https://dexscreener.com/solana/5l3qks8awhiizzndlfdnanucndat8v9x2whaaiv55ajp', '_blank');
   });
   twitterBtn.addEventListener('click', function() {
     window.open('https://x.com/wechosewealth', '_blank');

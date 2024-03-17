@@ -17,6 +17,33 @@ document.addEventListener("DOMContentLoaded", function() {
     main.style.display = 'flex';
   });
 
+  /* cards switch */
+  const lpBtn = document.getElementById('lp-button');
+  const mintBtn = document.getElementById('mint-button');
+  const fzBtn = document.getElementById('freeze-auth-button');
+  lpBtn.addEventListener('click', function() {
+    window.open('https://solscan.io/tx/3gX8sPgJim3TxEZEc3ZNNXQyH52S2M9Tx5XfuwN5fYMVNNvuigKgDmW3WG6ZECd2eCpub1ahx2F31sTrTHNZdqGY', '_blank');
+  });
+  mintBtn.addEventListener('click', function() {
+    window.open('https://solscan.io/tx/3uuhAeGUdhvGsJLSBxPwEB43vA9Z4wwrPTT2KYVcemYgB4F2iHgVBL9tEK2GSJYx6Lsh4Shr1HtyfynWCDmni6zw', '_blank');
+  });
+  fzBtn.addEventListener('click', function() {
+    window.open('https://solscan.io/tx/JZBD6y8tY8nDfJXg7jZki2PvsBKGfoY1t31HfDw4qC44TyzAbwB6Pb6VSMoSUvfjYpjW4AyWYoxrLWczabqnr5p', '_blank');
+  });
+
+  const mainCard = document.getElementById('main');
+  const tokenomics = document.getElementById('tokenomics');
+  const switchCard = document.getElementById('switch-card');
+  tokenomics.style.display = 'none'; // hide initially
+  switchCard.textContent = 'Tokenomics?'; // Initial text
+  switchCard.style.bottom = 'calc(50% - 248px)' // initial pos with main card
+  switchCard.addEventListener('click', function() {
+    mainCard.style.display = mainCard.style.display === 'none' ? 'flex' : 'none';
+    tokenomics.style.display = tokenomics.style.display === 'none' ? 'flex' : 'none';
+    switchCard.textContent = tokenomics.style.display === 'none' ? 'Tokenomics?' : 'Go back...';
+    switchCard.style.bottom = tokenomics.style.display === 'none' ? 'calc(50% - 248px)' : 'calc(50% - 304px)'; // pos with tokenomics card
+  });
+
   /* hyperlinks */
   const buyBtn = document.getElementById('buy-button');
   const chartBtn = document.getElementById('chart-button');

@@ -1,0 +1,15 @@
+Finisus, I'd like to add some things to the website such as:
+- tokenomics, breakdown of marketing budget, dev etc.
+- maybe some more AI generated graphics or memes, or our banner from dex? 
+- what about some logo or branding?
+
+
+tokenomics:
+supply: 777,777,777.77
+lp: [100% Burnt] [https://solscan.io/tx/3gX8sPgJim3TxEZEc3ZNNXQyH52S2M9Tx5XfuwN5fYMVNNvuigKgDmW3WG6ZECd2eCpub1ahx2F31sTrTHNZdqGY]
+
+Mint Revoked [https://solscan.io/tx/3uuhAeGUdhvGsJLSBxPwEB43vA9Z4wwrPTT2KYVcemYgB4F2iHgVBL9tEK2GSJYx6Lsh4Shr1HtyfynWCDmni6zw]
+Freeze Authority Revoked [https://solscan.io/tx/JZBD6y8tY8nDfJXg7jZki2PvsBKGfoY1t31HfDw4qC44TyzAbwB6Pb6VSMoSUvfjYpjW4AyWYoxrLWczabqnr5p]
+
+Marketing Wallet: Bxu7xk86Qm7g5jdrTpue8vr5SS488XUFALid6muz6hZz
+

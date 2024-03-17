@@ -360,10 +360,64 @@ h2 {
   background-color: rgba(148, 226, 213, 0.25);
 }
 
+/* tokenomics card */
+#token-details-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.proofBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: auto;
+  padding: 6px 12px;
+  margin-top: 8px;
+  font-family: 'SpaceMono';
+  font-size: 12px;
+  background-color: var(--baseTranslucent);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+}
+.proofBtn:hover {
+  background-color: rgba(205, 214, 244, 0.25);
+}
+.proofBtn:active {
+  background-color: var(--baseTranslucent);
+}
+#mw-container {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#mw-title {
+  font-size: 16px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1.69px solid rgba(205, 214, 244, 1.0);
+}
+#mw-addy {
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
 /* Switch for turning Emojis background on/off */
 #emoji-switch-container {
   position: absolute;
   bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
   margin-bottom: 24px;
   display: flex;
   flex-direction: row;
@@ -452,6 +506,37 @@ h2 {
   background-color: rgba(205, 214, 244, 0.25);
 }
 
+/* button to switch cards */
+#switch-card {
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  padding: 8px 12px;
+  font-family: 'SpaceMono';
+  font-size: 14px;
+  background-color: var(--baseTranslucent);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 12px;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+}
+#switch-card:hover {
+  background-color: rgba(205, 214, 244, 0.25);
+}
+#switch-card:active {
+  background-color: var(--baseTranslucent);
+}
+
 /* mobile optimzations */
 @media screen and (max-width: 801px) {
   header {
@@ -489,7 +574,7 @@ h2 {
     padding: 24px 24px;
   }
   h1 {
-    font-size: 24px;
+    font-size: 23px;
   }
   h2 {
     font-size: 20px;
@@ -521,5 +606,22 @@ h2 {
     padding: 8px 12px;
     font-family: 'SpaceMono';
     font-size: 14px;
+  }
+
+  span {
+    font-size: 14px;
+  }
+  .proofBtn {
+  font-size: 12px;
+  }
+  #mw-title {
+    font-size: 14px;
+  }
+  #mw-addy {
+    font-size: 9px;
+  }
+
+  #switch-card {
+    font-size: 12px;
   }
 }

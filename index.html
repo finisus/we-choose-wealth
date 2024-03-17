@@ -44,8 +44,9 @@
       <button id="buy-button" class="action-button">Buy</button>
     </div>
   </header>
+
   <main style="z-index: 10;">
-    <div class="main-blur">
+    <div id="main" class="main-blur">
       <h1>We choose wealth...</h1>
       <h2>$WEALTH</h2>
       <div id="ca-container">
@@ -58,10 +59,31 @@
         <button id="tg-button" class="socials">Telegram</button>
       </div>
     </div>
-    <div id="emoji-switch-container">
+
+    <div id="tokenomics" class="main-blur">
+      <h1>Tokenomics...</h1>
+      <span style="margin-top: 16px;">Total Supply<br>777,777,777.77</span>
+      <span>LP: 100% Burnt ✅</span>
+      <button id="lp-button" style="margin-bottom: 12px;" class="proofBtn">[click for proof]</button>
+      <span>Mint Revoked ✅</span>
+      <button id="mint-button" style="margin-bottom: 12px;" class="proofBtn">[click for proof]</button>
+      <span>Freeze Authority Revoked ✅</span>
+      <button id="freeze-auth-button" style="margin-bottom: 12px;" class="proofBtn">[click for proof]</button>
+      <div id="mw-container">
+        <span id="mw-title">Marketing Wallet</span>
+        <span id="mw-addy">Bxu7xk86Qm7g5jdrTpue8vr5SS488XUFALid6muz6hZz</span>
+      </div>
+    </div>
+
+    <button id="switch-card" style="z-index: 10;"></button>
+
+    <div id="emoji-switch-container" style="z-index: 12;">
       <div id="emoji-back-on" style="display: block;">hide emojis?</div>
       <div id="emoji-back-off" style="display: none;">show emojis?</div>
     </div>
   </main>
+
+  
+
 </body>
 </html>

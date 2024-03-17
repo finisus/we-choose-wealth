@@ -106,6 +106,12 @@ header {
   border-radius: 12px;
   cursor: pointer;
 }
+#volume-display:hover {
+  background-color: rgba(243, 139, 168, 0.25);
+}
+#volume-display:active {
+  background-color: var(--baseTranslucent);
+}
 #volume-current {
   letter-spacing: 2px;
   color: var(--red);
@@ -171,6 +177,12 @@ header {
   border-radius: 12px;
   cursor: pointer;
 }
+#music-widget:hover {
+  background-color: rgba(203, 166, 247, 0.25);
+}
+#music-widget:active {
+  background-color: var(--baseTranslucent);
+}
 #music-icon {
   display: block;
   height: 14px;
@@ -216,8 +228,20 @@ header {
 #chart-button {
   color: var(--lavender);
 }
+#chart-button:hover {
+  background-color: rgba(180, 190, 254, 0.25);
+}
+#chart-button:active {
+  background-color: var(--baseTranslucent);
+}
 #buy-button {
   color: var(--green);
+}
+#buy-button:hover {
+  background-color: rgba(166, 227, 161, 0.25);
+}
+#buy-button:active {
+  background-color: var(--baseTranslucent);
 }
 
 main {
@@ -320,11 +344,20 @@ h2 {
   color: var(--text);
   cursor: pointer;
 }
+.socials:active {
+  background-color: var(--baseTranslucent);
+}
 #twitter-button {
   color: var(--blue);
 }
+#twitter-button:hover {
+  background-color: rgba(137, 180, 250, 0.25);
+}
 #tg-button {
   color: var(--teal);
+}
+#tg-button:hover {
+  background-color: rgba(148, 226, 213, 0.25);
 }
 
 /* Switch for turning Emojis background on/off */
@@ -348,6 +381,12 @@ h2 {
   border: none;
   color: var(--text);
   cursor: pointer;
+}
+#emoji-switch-container:hover {
+  background-color: rgba(249, 226, 175, 0.25);
+}
+#emoji-switch-container:active {
+  background-color: var(--baseTranslucent);
 }
 #emoji-back-on {
   color: var(--yellow);
@@ -412,27 +451,6 @@ h2 {
 #close-landing-button:hover {
   background-color: rgba(205, 214, 244, 0.25);
 }
-
-/*
-#pfp {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 24px;
-  margin-bottom: 24px;
-  padding: 24px;
-  background-color: var(--baseTranslucent);
-  border-radius: 12px;
-  border: none;
-}
-#pfp img {
-  width: 132px;
-  height: auto;
-  opacity: 0.8;
-  border: none;
-  border-radius: 12px;
-}
-*/
 
 /* mobile optimzations */
 @media screen and (max-width: 801px) {

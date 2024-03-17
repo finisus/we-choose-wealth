@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   /* copy contract logic */
   const copyButton = document.getElementById('copy-ca-button');
-  const textToCopy = "4doMBvaDcGrJZccxm1cPySTtkm6NMNJKbJ7HWDAHY5rj";
+  const textToCopy = "7VRcDxY9MvhAFED1hrHbf5vQRK7EdvK7qNjh8tLd5ZQL";
   copyButton.addEventListener("click", async () => {
     try {
       // Try the modern Clipboard API first (if supported)
